@@ -38,7 +38,6 @@ extension ContentView {
     private func logOut() {
         user.isRegister = false
         user.name = ""
-        let _ = RegisterView()
     }    
 }
 

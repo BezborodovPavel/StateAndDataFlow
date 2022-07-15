@@ -12,7 +12,7 @@ struct RegisterView: View {
     @State private var name = ""
     
     private var valid: Bool {
-        name.count < 3 ? false : true
+        name.count >= 3
     }
     
     var body: some View {
@@ -21,7 +21,7 @@ struct RegisterView: View {
                 TextField("Enter your name...", text: $name)
                     .multilineTextAlignment(.center)
                 Text("\(name.count)")
-                    .foregroundColor(valid ? Color.green : Color.red)
+                    .foregroundColor(valid ? .green : .red)
                     .tint(Color.green)
             }
             .padding()
